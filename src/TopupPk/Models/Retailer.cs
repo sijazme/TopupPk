@@ -1,7 +1,11 @@
-﻿namespace TopupPk.Models
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace TopupPk.Models
 {
+    [Table("Retailer")]
     public class Retailer
-    {   
+    {
+        public int Id { get; set; }
         public string Name { get; set; }
         public string Street { get; set; }
         public string City { get; set; }
