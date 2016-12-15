@@ -20,14 +20,13 @@ namespace TopupPk.Controllers
             using (var context = new TopupPkContext(
                 _serviceProvider.GetRequiredService<DbContextOptions<TopupPkContext>>()))
             {
-
                 if (context.Retailers.Any())
                 {
-
-                }
+                    return View(context.Retailers.ToList());
+                }                
             }
 
-           return View();
+            return View();
         }
 
         public IActionResult About()
